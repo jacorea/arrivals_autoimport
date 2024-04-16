@@ -14,21 +14,21 @@ load_dotenv()
 app = Flask(__name__)
 
 # SFTP Variables
-HOST = os.getenv('HOST')
-PORT = os.getenv('PORT')
-PASSWORD = os.getenv('PASSWORD')
-SFTP_USERNAME = os.getenv('SFTP_USERNAME')
-SFTP_DIR = os.getenv('SFTP_DIR')
+HOST = os.environ.get('HOST')
+PORT = os.environ.get('PORT')
+PASSWORD = os.environ.get('PASSWORD')
+SFTP_USERNAME = os.environ.get('SFTP_USERNAME')
+SFTP_DIR = os.environ.get('SFTP_DIR')
 
 
 # login Variables
-LOGIN_USERNAME = os.getenv('LOGIN_USERNAME')
-LOGIN_PASSWORD = os.getenv('LOGIN_PASSWORD')
-SYSTEM_ID = os.getenv('SYSTEM_ID')
+LOGIN_USERNAME = os.environ.get('LOGIN_USERNAME')
+LOGIN_PASSWORD = os.environ.get('LOGIN_PASSWORD')
+SYSTEM_ID = os.environ.get('SYSTEM_ID')
 
 # API endpoints
-LOGIN_URL = os.getenv('LOGIN_URL')
-UPLOAD_URL = os.getenv('UPLOAD_URL')
+LOGIN_URL = os.environ.get('LOGIN_URL')
+UPLOAD_URL = os.environ.get('UPLOAD_URL')
 
 # Create date to add to files
 now =  datetime.now()
